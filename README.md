@@ -33,7 +33,7 @@ docker exec -it [name] mysql -u umilescarrental -p'pmilescarrental'
 ```
 ---
 
-#Crear Tablas DB
+# Crear Tablas DB
 
 Para crear las tablas de la base de datos vamos a usar migrations.
 Vamos acceder a la siguiente ruta desde una consola: 

@@ -17,7 +17,6 @@ namespace MilesCarRental.Application.UseCases.Paises.Commands.UpdatePaisCommand
 
         public async Task<Response<int>> Handle(UpdatePaisCommand request, CancellationToken cancellationToken)
         {
-
             var pais = await _repositoryAsync.FirstOrDefaultAsync(new PaisByIdSpecification(request.Id), cancellationToken);
            
             if (pais == null)

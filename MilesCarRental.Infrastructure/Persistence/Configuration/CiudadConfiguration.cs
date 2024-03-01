@@ -18,8 +18,8 @@ namespace MilesCarRental.Infrastructure.Persistence.Configuration
                 .HasMaxLength(150)
                 .IsRequired();
 
-            builder.Property(p => p.IdPais)
-               .HasColumnName("IdPais")
+            builder.Property(p => p.PaisId)
+               .HasColumnName("PaisId")
                .HasMaxLength(30)
                .IsRequired();
 

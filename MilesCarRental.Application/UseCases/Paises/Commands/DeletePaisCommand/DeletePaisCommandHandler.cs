@@ -10,6 +10,11 @@ namespace MilesCarRental.Application.UseCases.Paises.Commands.DeletePaisCommand
     {
         private readonly IRepositoryAsync<Pais> _repositoryAsync;
 
+        public DeletePaisCommandHandler(IRepositoryAsync<Pais> repositoryAsync)
+        {
+            _repositoryAsync = repositoryAsync ?? throw new ArgumentNullException(nameof(repositoryAsync));
+        }
+
         public async Task<Response<int>> Handle(DeletePaisCommand request, CancellationToken cancellationToken)
         {
             var pais = await _repositoryAsync.FirstOrDefaultAsync(new PaisByIdSpecification(request.Id));

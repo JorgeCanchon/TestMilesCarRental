@@ -25,8 +25,8 @@ namespace MilesCarRental.Infrastructure.Persistence.Configuration
                 .HasMaxLength(150)
                 .IsRequired();
 
-            builder.Property(p => p.IdCiudad)
-               .HasColumnName("IdCiudad")
+            builder.Property(p => p.CiudadId)
+               .HasColumnName("CiudadId")
                .HasMaxLength(30)
                .IsRequired();
 
