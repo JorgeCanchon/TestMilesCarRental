@@ -7,12 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Specifications\Localidad\" />
-    <Folder Include="Specifications\Ciudad\" />
-    <Folder Include="Specifications\Vehiculo\" />
-    <Folder Include="UseCases\Ciudades\" />
-    <Folder Include="UseCases\Localidades\" />
-    <Folder Include="UseCases\Vehiculos\" />
+    <Folder Include="UseCases\Ciudades\Queries\SearchCiudadesByMatch\" />
+    <Folder Include="UseCases\Ciudades\Queries\SearchCiudadesByName\" />
   </ItemGroup>
 
   <ItemGroup>

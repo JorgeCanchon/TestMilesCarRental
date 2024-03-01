@@ -47,28 +47,28 @@ namespace MilesCarRental.Infrastructure.Persistence.Contexts
             context.SaveChanges();
 
             //Agregar Ciudades
-            var bogota = new Ciudad { Nombre = "Bogota", IdPais = colombia.Id, Created = DateTime.Now };
-            var medellin = new Ciudad { Nombre = "Medellin", IdPais = colombia.Id, Created = DateTime.Now };
-            var cali = new Ciudad { Nombre = "Cali", IdPais = colombia.Id, Created = DateTime.Now };
-            var pereira = new Ciudad { Nombre = "Pereira", IdPais = colombia.Id, Created = DateTime.Now };
+            var bogota = new Ciudad { Nombre = "Bogota", PaisId = colombia.Id, Created = DateTime.Now };
+            var medellin = new Ciudad { Nombre = "Medellin", PaisId = colombia.Id, Created = DateTime.Now };
+            var cali = new Ciudad { Nombre = "Cali", PaisId = colombia.Id, Created = DateTime.Now };
+            var pereira = new Ciudad { Nombre = "Pereira", PaisId = colombia.Id, Created = DateTime.Now };
 
             context.Ciudades.AddRange(bogota, medellin, cali, pereira);
             context.SaveChanges();
 
             //Agregar Localidades
-            var aeropuertoDorado = new Localidad { Nombre = "Aeropuerto El Dorado", Direccion = "Calle 26 #103-9", Created = DateTime.Now, IdCiudad = bogota.Id };
-            var ccAndino = new Localidad { Nombre = "Centro Comercial Andino", Direccion = "Cra. 11, 82-71", Created = DateTime.Now, IdCiudad = bogota.Id };
-            var exito70 = new Localidad { Nombre = "Exito la 70", Direccion = "Cra. 70 #43 - 31", Created = DateTime.Now, IdCiudad = medellin.Id };
-            var aeropuertoOlaya = new Localidad { Nombre = "Aeropuerto Olaya Herrera", Direccion = "Cra. 65 #13-157", Created = DateTime.Now, IdCiudad = medellin.Id };
+            var aeropuertoDorado = new Localidad { Nombre = "Aeropuerto El Dorado", Direccion = "Calle 26 #103-9", Created = DateTime.Now, CiudadId = bogota.Id };
+            var ccAndino = new Localidad { Nombre = "Centro Comercial Andino", Direccion = "Cra. 11, 82-71", Created = DateTime.Now, CiudadId = bogota.Id };
+            var exito70 = new Localidad { Nombre = "Exito la 70", Direccion = "Cra. 70 #43 - 31", Created = DateTime.Now, CiudadId = medellin.Id };
+            var aeropuertoOlaya = new Localidad { Nombre = "Aeropuerto Olaya Herrera", Direccion = "Cra. 65 #13-157", Created = DateTime.Now, CiudadId = medellin.Id };
 
             context.Localidades.AddRange(aeropuertoDorado, ccAndino, exito70, aeropuertoOlaya);
             context.SaveChanges();
 
             //Agegar Vehiculos
-            var renault = new Vehiculo { Marca = "Renault", Placa = "RGT123", IdLocalidadRecogida = aeropuertoDorado.Id, IdLocalidadDevolucion = aeropuertoDorado.Id, Created = DateTime.Now };
-            var chevrolet = new Vehiculo { Marca = "Chevrolet", Placa = "TZX123", IdLocalidadRecogida = exito70.Id, IdLocalidadDevolucion = exito70.Id, Created = DateTime.Now };
-            var nissan = new Vehiculo { Marca = "Nissan", Placa = "AAA123", IdLocalidadRecogida = aeropuertoDorado.Id, IdLocalidadDevolucion = exito70.Id, Created = DateTime.Now };
-            var honda = new Vehiculo { Marca = "Honda", Placa = "BBB123", IdLocalidadRecogida = exito70.Id, IdLocalidadDevolucion = aeropuertoDorado.Id, Created = DateTime.Now };
+            var renault = new Vehiculo { Marca = "Renault", Placa = "RGT123", LocalidadRecogidaId = aeropuertoDorado.Id, LocalidadDevolucionId = aeropuertoDorado.Id, Created = DateTime.Now };
+            var chevrolet = new Vehiculo { Marca = "Chevrolet", Placa = "TZX123", LocalidadRecogidaId = exito70.Id, LocalidadDevolucionId = exito70.Id, Created = DateTime.Now };
+            var nissan = new Vehiculo { Marca = "Nissan", Placa = "AAA123", LocalidadRecogidaId = aeropuertoDorado.Id, LocalidadDevolucionId = exito70.Id, Created = DateTime.Now };
+            var honda = new Vehiculo { Marca = "Honda", Placa = "BBB123", LocalidadRecogidaId = exito70.Id, LocalidadDevolucionId = aeropuertoDorado.Id, Created = DateTime.Now };
 
             context.Vehiculos.AddRange(renault, chevrolet, nissan, honda);
             context.SaveChanges();

@@ -6,7 +6,7 @@ namespace MilesCarRental.Domain.Entities
     {
         public string Nombre { get; set; } = null!;
         public string Direccion { get; set; } = null!;
-        public int IdCiudad { get; set; }
+        public int CiudadId { get; set; }
         public virtual Ciudad Ciudad { get; set; } = null!;
     }
 }

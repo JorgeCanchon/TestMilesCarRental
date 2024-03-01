@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -39,8 +40,7 @@ namespace MilesCarRental.Infrastructure.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Nombre = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    IdPais = table.Column<int>(type: "int", maxLength: 30, nullable: false),
-                    PaisId = table.Column<int>(type: "int", nullable: false),
+                    PaisId = table.Column<int>(type: "int", maxLength: 30, nullable: false),
                     FechaCreacion = table.Column<DateTime>(type: "datetime(6)", maxLength: 30, nullable: false),
                     UltimaFechaModificacion = table.Column<DateTime>(type: "datetime(6)", maxLength: 30, nullable: true)
                 },
@@ -66,8 +66,7 @@ namespace MilesCarRental.Infrastructure.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Direccion = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    IdCiudad = table.Column<int>(type: "int", maxLength: 30, nullable: false),
-                    CiudadId = table.Column<int>(type: "int", nullable: false),
+                    CiudadId = table.Column<int>(type: "int", maxLength: 30, nullable: false),
                     FechaCreacion = table.Column<DateTime>(type: "datetime(6)", maxLength: 30, nullable: false),
                     UltimaFechaModificacion = table.Column<DateTime>(type: "datetime(6)", maxLength: 30, nullable: true)
                 },
@@ -93,10 +92,9 @@ namespace MilesCarRental.Infrastructure.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Placa = table.Column<string>(type: "varchar(15)", maxLength: 15, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    IdLocalidadRecogida = table.Column<int>(type: "int", maxLength: 30, nullable: false),
-                    LocalidadRecogidaId = table.Column<int>(type: "int", nullable: false),
-                    IdLocalidadDevolucion = table.Column<int>(type: "int", maxLength: 30, nullable: false),
-                    LocalidadDevolucionId = table.Column<int>(type: "int", nullable: false),
+                    Disponible = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    LocalidadRecogidaId = table.Column<int>(type: "int", maxLength: 30, nullable: false),
+                    LocalidadDevolucionId = table.Column<int>(type: "int", maxLength: 30, nullable: false),
                     FechaCreacion = table.Column<DateTime>(type: "datetime(6)", maxLength: 30, nullable: false),
                     UltimaFechaModificacion = table.Column<DateTime>(type: "datetime(6)", maxLength: 30, nullable: true)
                 },

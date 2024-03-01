@@ -21,4 +21,10 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="UseCases\Paises\Commands\" />
+    <Folder Include="UseCases\Paises\Queries\" />
+  </ItemGroup>
+
 </Project>

@@ -11,7 +11,7 @@ using MilesCarRental.Infrastructure.Persistence.Contexts;
 namespace MilesCarRental.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240301015113_InitialMigration")]
+    [Migration("20240301202130_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -36,11 +36,6 @@ namespace MilesCarRental.Infrastructure.Migrations
                         .HasColumnType("datetime(6)")
                         .HasColumnName("FechaCreacion");
 
-                    b.Property<int>("IdPais")
-                        .HasMaxLength(30)
-                        .HasColumnType("int")
-                        .HasColumnName("IdPais");
-
                     b.Property<DateTime?>("LastModified")
                         .HasMaxLength(30)
                         .HasColumnType("datetime(6)")
@@ -53,7 +48,9 @@ namespace MilesCarRental.Infrastructure.Migrations
                         .HasColumnName("Nombre");
 
                     b.Property<int>("PaisId")
-                        .HasColumnType("int");
+                        .HasMaxLength(30)
+                        .HasColumnType("int")
+                        .HasColumnName("PaisId");
 
                     b.HasKey("Id");
 
@@ -70,7 +67,9 @@ namespace MilesCarRental.Infrastructure.Migrations
                         .HasColumnName("Id");
 
                     b.Property<int>("CiudadId")
-                        .HasColumnType("int");
+                        .HasMaxLength(30)
+                        .HasColumnType("int")
+                        .HasColumnName("CiudadId");
 
                     b.Property<DateTime>("Created")
                         .HasMaxLength(30)
@@ -82,11 +81,6 @@ namespace MilesCarRental.Infrastructure.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("varchar(150)")
                         .HasColumnName("Direccion");
-
-                    b.Property<int>("IdCiudad")
-                        .HasMaxLength(30)
-                        .HasColumnType("int")
-                        .HasColumnName("IdCiudad");
 
                     b.Property<DateTime?>("LastModified")
                         .HasMaxLength(30)
@@ -146,15 +140,9 @@ namespace MilesCarRental.Infrastructure.Migrations
                         .HasColumnType("datetime(6)")
                         .HasColumnName("FechaCreacion");
 
-                    b.Property<int>("IdLocalidadDevolucion")
-                        .HasMaxLength(30)
-                        .HasColumnType("int")
-                        .HasColumnName("IdLocalidadDevolucion");
-
-                    b.Property<int>("IdLocalidadRecogida")
-                        .HasMaxLength(30)
-                        .HasColumnType("int")
-                        .HasColumnName("IdLocalidadRecogida");
+                    b.Property<bool>("Disponible")
+                        .HasColumnType("tinyint(1)")
+                        .HasColumnName("Disponible");
 
                     b.Property<DateTime?>("LastModified")
                         .HasMaxLength(30)
@@ -162,10 +150,14 @@ namespace MilesCarRental.Infrastructure.Migrations
                         .HasColumnName("UltimaFechaModificacion");
 
                     b.Property<int>("LocalidadDevolucionId")
-                        .HasColumnType("int");
+                        .HasMaxLength(30)
+                        .HasColumnType("int")
+                        .HasColumnName("LocalidadDevolucionId");
 
                     b.Property<int>("LocalidadRecogidaId")
-                        .HasColumnType("int");
+                        .HasMaxLength(30)
+                        .HasColumnType("int")
+                        .HasColumnName("LocalidadRecogidaId");
 
                     b.Property<string>("Marca")
                         .IsRequired()
