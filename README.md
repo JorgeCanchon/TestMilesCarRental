@@ -31,5 +31,17 @@ Conectarse a la instancia de mysql
 ```shell
 docker exec -it [name] mysql -u umilescarrental -p'pmilescarrental'
 ```
+---
 
+#Crear Tablas DB
 
+Para crear las tablas de la base de datos vamos a usar migrations.
+Vamos acceder a la siguiente ruta desde una consola: 
+
+- \TestMilesCarRental\MilesCarRental.Infrastructure
+
+Luego ejecutamos el siguiente comando para restaurar la migracion.
+
+```shell
+dotnet ef --startup-project ../milescarrental.api/ database update
+```
