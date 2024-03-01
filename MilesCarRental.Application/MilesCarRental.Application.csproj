@@ -7,12 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\Interfaces\" />
-    <Folder Include="Common\Mappings\" />
-    <Folder Include="Exceptions\" />
-    <Folder Include="Common\Behaviours\" />
-    <Folder Include="Specifications\" />
-    <Folder Include="UseCases\" />
+    <Folder Include="Specifications\Localidad\" />
+    <Folder Include="Specifications\Ciudad\" />
+    <Folder Include="Specifications\Vehiculo\" />
+    <Folder Include="UseCases\Ciudades\" />
+    <Folder Include="UseCases\Localidades\" />
+    <Folder Include="UseCases\Vehiculos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ardalis.Specification" Version="7.0.0" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MilesCarRental.Domain\MilesCarRental.Domain.csproj" />
   </ItemGroup>
 
 </Project>

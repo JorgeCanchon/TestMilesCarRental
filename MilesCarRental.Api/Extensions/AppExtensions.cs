@@ -1,6 +1,12 @@
-﻿namespace MilesCarRental.Api.Extensions
+﻿using MilesCarRental.Api.Middlewares;
+
+namespace MilesCarRental.Api.Extensions
 {
-    public class AppExtensions
+    public static class AppExtensions
     {
+        public static void UseErrorHandlingMiddleware(this IApplicationBuilder app)
+        {
+            app.UseMiddleware<ErrorHandlerMiddleware>();
+        }
     }
 }

@@ -7,15 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6D802089-DC3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{45CD5489-0589-4FF6-9336-AB7C021FC665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Api", "MilesCarRental.Api\MilesCarRental.Api.csproj", "{F91246FF-5E7C-4DD9-9BDC-4150FC32C689}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilesCarRental.Api", "MilesCarRental.Api\MilesCarRental.Api.csproj", "{F91246FF-5E7C-4DD9-9BDC-4150FC32C689}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D85B740C-849B-4CD8-AED0-BAF99EB9A2E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Application", "MilesCarRental.Application\MilesCarRental.Application.csproj", "{7F3DFB03-0B47-442A-AD1A-AB3C8130FB80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilesCarRental.Application", "MilesCarRental.Application\MilesCarRental.Application.csproj", "{7F3DFB03-0B47-442A-AD1A-AB3C8130FB80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Domain", "MilesCarRental.Domain\MilesCarRental.Domain.csproj", "{AAE16029-DE04-46BE-89BD-F9D20D97E40B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilesCarRental.Domain", "MilesCarRental.Domain\MilesCarRental.Domain.csproj", "{AAE16029-DE04-46BE-89BD-F9D20D97E40B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Infrastructure", "MilesCarRental.Infrastructure\MilesCarRental.Infrastructure.csproj", "{3723EB5A-B96B-4233-99D1-05CF8EA18EE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilesCarRental.Infrastructure", "MilesCarRental.Infrastructure\MilesCarRental.Infrastructure.csproj", "{3723EB5A-B96B-4233-99D1-05CF8EA18EE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Api.IntegrationTests", "MilesCarRental.Api.IntegrationTests\MilesCarRental.Api.IntegrationTests.csproj", "{7E0DEB5C-B426-452C-80EA-198A37A285DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Application.Tests", "MilesCarRental.Application.Tests\MilesCarRental.Application.Tests.csproj", "{172A245E-33DC-4CC1-82E1-AF4E1BCEA1B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,14 @@ Global
 		{3723EB5A-B96B-4233-99D1-05CF8EA18EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3723EB5A-B96B-4233-99D1-05CF8EA18EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3723EB5A-B96B-4233-99D1-05CF8EA18EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E0DEB5C-B426-452C-80EA-198A37A285DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E0DEB5C-B426-452C-80EA-198A37A285DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E0DEB5C-B426-452C-80EA-198A37A285DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E0DEB5C-B426-452C-80EA-198A37A285DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172A245E-33DC-4CC1-82E1-AF4E1BCEA1B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172A245E-33DC-4CC1-82E1-AF4E1BCEA1B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172A245E-33DC-4CC1-82E1-AF4E1BCEA1B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172A245E-33DC-4CC1-82E1-AF4E1BCEA1B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +64,8 @@ Global
 		{7F3DFB03-0B47-442A-AD1A-AB3C8130FB80} = {6D802089-DC3F-4F1B-92AC-0E4D118614CB}
 		{AAE16029-DE04-46BE-89BD-F9D20D97E40B} = {6D802089-DC3F-4F1B-92AC-0E4D118614CB}
 		{3723EB5A-B96B-4233-99D1-05CF8EA18EE7} = {6D802089-DC3F-4F1B-92AC-0E4D118614CB}
+		{7E0DEB5C-B426-452C-80EA-198A37A285DA} = {45CD5489-0589-4FF6-9336-AB7C021FC665}
+		{172A245E-33DC-4CC1-82E1-AF4E1BCEA1B8} = {45CD5489-0589-4FF6-9336-AB7C021FC665}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F47685C4-6C57-49F8-851A-AC0F355CEEAA}
