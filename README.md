@@ -45,3 +45,20 @@ Luego ejecutamos el siguiente comando para restaurar la migracion.
 ```shell
 dotnet ef --startup-project ../milescarrental.api/ database update
 ```
+
+---
+# Insercion Data Prueba
+
+Al correr el API encontramos este endpoint tipo POST para insertar data inicial para pruebas.
+
+![image](https://github.com/JorgeCanchon/TestMilesCarRental/assets/20799377/91536a7a-edd9-495d-9da3-9c750ba4c55d)
+
+Adicional entontramos este método para obtener laos vehiculos disponibles por localidad
+
+![image](https://github.com/JorgeCanchon/TestMilesCarRental/assets/20799377/ba7a6939-df7c-456a-a5a7-49fe47b5871f)
+
+# Test de integración y Test unitarios
+
+
+
+
