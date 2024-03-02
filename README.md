@@ -1,36 +1,22 @@
 # TestMilesCarRental
-WebApi buscador vehiculos para la renta
-
-Configuracion MySQL And Docker
+WebApi con la funcionalidad para buscar vehiculos disponibles para su renta
 ---
-Descargar imagen mysql 
-```shell
-docker pull mysql
-```
 
-# Plain docker
-```shell
-docker run -d --rm --name mysqlc -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=milescarrental -v mysql_data:/var/lib/mysql mysql:latest
-```
-Conectarse a la instancia de mysql del container
+# Ejecutar proyecto
 
-```shell
-docker exec -it mysqlc mysql -u root -p'root'
-```
-
-# Docker Compose
+Escriba el siguiente comando en un CLI para ejecutar el docker-compose.yml en la carpeta raiz del proyecto  \TestMilesCarRental
 
 ```shell
 docker-compose up -d
 ```
 
-see [docker-compose.yaml](./docker-compose.yaml)
-
-Conectarse a la instancia de mysql
+Una vez descargue y esten listos los contenedores ejecute el siguiente comando para ver los contenedores
 
 ```shell
-docker exec -it [name] mysql -u umilescarrental -p'pmilescarrental'
+docker ps 
 ```
+Con esto abrá instalado un contenedor con MySQL
+
 ---
 
 # Crear Tablas DB
@@ -46,6 +32,27 @@ Luego ejecutamos el siguiente comando para restaurar la migracion.
 dotnet ef --startup-project ../milescarrental.api/ database update
 ```
 
+Conectarse a la instancia de mysql
+
+Para conectarse a la instancia de MySql desde el CLI ejecute el siguiente comando:
+
+```shell
+docker exec -it [name] mysql -u umilescarrental -p'pmilescarrental'
+```
+Abra la solucion y ejecute el proyecto con el IIS Express
+
+![image](https://github.com/JorgeCanchon/TestMilesCarRental/assets/20799377/fcd4fc04-e8eb-4556-a833-c356b6deea01)
+
+---
+
+# Accediendo a la Documentacion Swagger del API
+
+Acceda al api por la siguiente URL:
+
+[https://localhost:50825/swagger/index.html](https://localhost:44391/swagger/index.html)
+
+see [docker-compose.yaml](./docker-compose.yaml)
+
 ---
 # Insercion Data Prueba
 
@@ -58,7 +65,4 @@ Adicional entontramos este método para obtener laos vehiculos disponibles por l
 ![image](https://github.com/JorgeCanchon/TestMilesCarRental/assets/20799377/ba7a6939-df7c-456a-a5a7-49fe47b5871f)
 
 # Test de integración y Test unitarios
-
-
-
 
