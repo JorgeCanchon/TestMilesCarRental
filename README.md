@@ -18,6 +18,7 @@ docker ps
 Con esto abrá instalado un contenedor con MySQL
 
 ---
+![image](https://github.com/JorgeCanchon/TestMilesCarRental/assets/20799377/4bd3eb93-a29a-4b77-b520-f4b2e93d9658)
 
 # Crear Tablas DB
 
